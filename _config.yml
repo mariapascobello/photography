@@ -19,11 +19,11 @@ footer:
 web_design: "AJ"
 
 social_urls:
-  twitter: "https://www.twitter.com/"
+  # twitter: "https://www.twitter.com/"
   instagram: "https://www.instagram.com/fotosbymariacarla"
-  dribbble: "https://www.dribble.com/"
+  # dribbble: "https://www.dribble.com/"
   linkedin: "https://in.linkedin.com/in/maría-carla-pascobello-0b5553208/"
-  github: "https://www.github.com/mariapascobello"
+  # github: "https://www.github.com/mariapascobello"
 
 # Configure which exif data to display
 # Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
