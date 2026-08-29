@@ -20,9 +20,9 @@ web_design: "AJ"
 
 social_urls:
   # twitter: "https://www.twitter.com/"
-  instagram: "https://www.instagram.com/fotosbymariacarla"
+  instagram: "https://www.instagram.com/fotosbymariacarla" target="_blank"
   # dribbble: "https://www.dribble.com/"
-  linkedin: "https://in.linkedin.com/in/maría-carla-pascobello-0b5553208/"
+  linkedin: "https://in.linkedin.com/in/maría-carla-pascobello-0b5553208/" target="_blank"
   # github: "https://www.github.com/mariapascobello"
 
 # Configure which exif data to display
