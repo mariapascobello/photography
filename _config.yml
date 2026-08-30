@@ -6,11 +6,11 @@ image_thumbs_loc: "/images/thumbs"
 google_analytics: "G-P495TE714H"
 
 # UI configs
-title: "Photos by María Carla"
+title: "Photography by María Carla"
 subtitle: "See the world through my eyes!"
 author: "María Carla"
 header:
-  title: "Photos"
+  title: "Photography"
   subtitle: "by María Carla"
 footer:
   name: "Hey there, my name is María Carla"
