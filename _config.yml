@@ -3,7 +3,7 @@ baseurl: "/photography"
 # baseurl: "" # Comment the above line and uncomment this to test the website locally
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
-# google_analytics: "UA-46465113-2"
+google_analytics: "G-P495TE714H"
 
 # UI configs
 title: "Photos by María Carla"
