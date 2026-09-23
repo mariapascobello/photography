@@ -4,16 +4,28 @@ layout: null
 
 <h1>Debug Info</h1>
 
-<h2>All fulls images:</h2>
-{% for image in site.static_files %} {% if image.path contains 'fulls' %}
-<p>
-  name: "{{ image.name }}" | key: "{{ image.name | remove: '.jpg' }}" |
-  location: "{{ site.data.locations[image.name | remove: '.jpg'] }}"
-</p>
-{% endif %} {% endfor %}
+<h2>Total static files:</h2>
+<p>{{ site.static_files | size }}</p>
 
-<h2>Raw locations data:</h2>
-<pre>{{ site.data.locations | jsonify }}</pre>
+<h2>Paths containing "fulls":</h2>
+<ul>
+  {% for image in site.static_files %} {% if image.path contains 'fulls' %}
+  <li>
+    name: "{{ image.name }}" | path: "{{ image.path }}" | key: "{{ image.name |
+    remove: '.jpg' }}" | location: "{{ site.data.locations[image.name | remove:
+    '.jpg'] }}"
+  </li>
+  {% endif %} {% endfor %}
+</ul>
 
-<h2>Is locations loaded?</h2>
-<p>Total locations: {{ site.data.locations | size }}</p>
+<h2>Data check:</h2>
+<p>Total locations in data file: {{ site.data.locations | size }}</p>
+<p>Location for "01": "{{ site.data.locations['01'] }}"</p>
+<p>Location for 01: "{{ site.data.locations[01] }}"</p>
+
+<h2>All image paths:</h2>
+<ul>
+  {% for file in site.static_files %}
+  <li>{{ file.path }}</li>
+  {% endfor %}
+</ul>
