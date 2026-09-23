@@ -38,7 +38,8 @@ layout: default
 
   <!-- Main -->
   <div id="main" data-location="true">
-    {% for image in site.static_files %} {% if image.path contains 'fulls' %}
+    {% for image in site.static_files %} {% if image.path contains 'fulls' %} {%
+    assign image_key = image.name | remove: '.jpg' %}
     <article class="thumb">
       <a
         href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}"
@@ -48,7 +49,7 @@ layout: default
           src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}"
           alt=""
           data-name="{{ image.name }}"
-          data-location="{{ site.data.locations[image.name | remove: '.jpg'] }}"
+          data-location="{{ site.data.locations[image_key] }}"
       /></a>
     </article>
     {% endif %} {% endfor %}
