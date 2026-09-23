@@ -48,9 +48,8 @@ layout: default
           src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}"
           alt=""
           data-name="{{ image.name }}"
+          data-location="{{ site.data.locations[image.name | remove: '.jpg'] }}"
       /></a>
-      <!--<h2></h2>
-            <p></p>-->
     </article>
     {% endif %} {% endfor %}
   </div>
