@@ -4,12 +4,16 @@ layout: null
 
 <h1>Debug Info</h1>
 
-<h2>First 5 images:</h2>
-{% for image in site.static_files limit: 5 %} {% if image.path contains 'fulls'
-%}
+<h2>All fulls images:</h2>
+{% for image in site.static_files %} {% if image.path contains 'fulls' %}
 <p>
   name: "{{ image.name }}" | key: "{{ image.name | remove: '.jpg' }}" |
-  location: "{{ site.data.locations[image.name | remove: '.jpg'] }}" |
-  all_locations: {{ site.data.locations | jsonify }}
+  location: "{{ site.data.locations[image.name | remove: '.jpg'] }}"
 </p>
 {% endif %} {% endfor %}
+
+<h2>Raw locations data:</h2>
+<pre>{{ site.data.locations | jsonify }}</pre>
+
+<h2>Is locations loaded?</h2>
+<p>Total locations: {{ site.data.locations | size }}</p>
