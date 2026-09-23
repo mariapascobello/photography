@@ -190,7 +190,44 @@
     $image_img.hide();
 
     // Location data (no EXIF needed)
-    var location = $image_img.data("location");
+    // Get location from the data file using the filename
+    var imageName = $image_img
+      .data("name")
+      .replace(".jpg", "")
+      .replace(".JPG", "");
+    var locationsData = {
+      "01": "Apo Island, Philippines",
+      "02": "Apo Island, Philippines",
+      "03": "Apo Island, Philippines",
+      "04": "Apo Island, Philippines",
+      "05": "Coron, Philippines",
+      "06": "Sibaltan, Philippines",
+      "07": "El Nido, Philippines",
+      "08": "El Nido, Philippines",
+      "09": "Manila, Philippines",
+      10: "Siquijor, Philippines",
+      11: "Manila, Philippines",
+      12: "El Nido, Philippines",
+      13: "Manila, Philippines",
+      14: "Sibaltan, Philippines",
+      15: "Manila, Philippines",
+      16: "El Nido, Philippines",
+      17: "Kaamangan, Philippines",
+      18: "Apo Island, Philippines",
+      19: "Sardinia, Italy",
+      20: "Sardinia, Italy",
+      21: "Sardinia, Italy",
+      22: "Sardinia, Italy",
+      23: "Sardinia, Italy",
+      24: "Sardinia, Italy",
+      25: "Sardinia, Italy",
+      26: "Sardinia, Italy",
+      27: "Sardinia, Italy",
+      28: "Copenhaguen, Denmark",
+      29: "Copenhaguen, Denmark",
+      30: "A Coruña, Spain",
+    };
+    var location = locationsData[imageName];
     if (location) {
       exifDatas[$image_img.data("name")] =
         '<i class="fa fa-map-marker-alt" aria-hidden="true"></i> ' + location;
