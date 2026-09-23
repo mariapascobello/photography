@@ -1,0 +1,15 @@
+---
+layout: null
+---
+
+<h1>Debug Info</h1>
+
+<h2>First 5 images:</h2>
+{% for image in site.static_files limit: 5 %} {% if image.path contains 'fulls'
+%}
+<p>
+  name: "{{ image.name }}" | key: "{{ image.name | remove: '.jpg' }}" |
+  location: "{{ site.data.locations[image.name | remove: '.jpg'] }}" |
+  all_locations: {{ site.data.locations | jsonify }}
+</p>
+{% endif %} {% endfor %}
